@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    'checkcoins'
+    'checkcoins',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 
 ROOT_URLCONF = 'confcoins.urls'
 
@@ -81,8 +84,12 @@ WSGI_APPLICATION = 'confcoins.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': 'ec2-3-216-113-109.compute-1.amazonaws.com',
+        'USER': 'yejkvpwtsstzmp',
+        'PASSWORD': '54e817e2595ceaba2217b37582719333c6c0a83ed93f5840604d13a07862c244',
+        'NAME': 'dbopbchdelds88',
+        'PORT': '5432',
     }
 }
 
