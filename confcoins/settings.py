@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'confcoins.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dbopbchdelds88',
+        'USER': 'yejkvpwtsstzmp',
+        'PASSWORD': '54e817e2595ceaba2217b37582719333c6c0a83ed93f5840604d13a07862c244',
+        'HOST': 'ec2-3-216-113-109.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 

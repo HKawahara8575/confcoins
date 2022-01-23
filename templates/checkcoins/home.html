@@ -1,0 +1,21 @@
+{% extends 'checkcoins/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    List
+{% endblock %}
+
+
+{% block add_head %}
+    <h1>{{ UserID }} さんようこそ！！</h1>
+
+ <p> ログアウトは
+ <a href="{% url 'accounts:logout' %}">こちら</a>
+ </p>
+{% endblock %}
+
+
+{% block content %}
+
+{% endblock %}
