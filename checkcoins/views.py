@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView, ListView, FormView
 
-# Create your views here.
+
+class List(ListView):
+    template_name = 'checkcoins/list.html'
